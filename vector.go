@@ -1,9 +1,9 @@
 package main
 
 type Vector struct {
-	X float32
-	Y float32
-	Z float32
+	X float64
+	Y float64
+	Z float64
 }
 
 func (x Vector) Add(y Vector) Vector {
@@ -12,4 +12,8 @@ func (x Vector) Add(y Vector) Vector {
 		Y: x.Y + y.Y,
 		Z: x.Z + y.Z,
 	}
+}
+
+func (x Vector) SquaredNorm() float64 {
+	return x.X * x.Y * x.Z
 }
