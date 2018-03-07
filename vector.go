@@ -16,6 +16,13 @@ func (x Vector) Add(y Vector) Vector {
 	}
 }
 
+func (x Vector) Sub(y Vector) Vector {
+	return Vector{
+		X: x.X - y.X,
+		Y: x.Y - y.Y,
+		Z: x.Z - y.Z,
+	}
+}
 func (x Vector) SquaredNorm() float64 {
 	return x.X * x.Y * x.Z
 }
