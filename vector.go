@@ -39,3 +39,7 @@ func (x Vector) SquaredNorm() float64 {
 func (x Vector) Norm() float64 {
 	return math.Sqrt(x.SquaredNorm())
 }
+
+func (x Vector) Dot(y Vector) float64 {
+	return x.X*y.X + x.Y*y.Y + x.Z*y.Z
+}
