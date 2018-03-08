@@ -33,7 +33,7 @@ func (x Vector) ScalarMul(y float64) Vector {
 }
 
 func (x Vector) SquaredNorm() float64 {
-	return x.X * x.Y * x.Z
+	return x.X*x.X + x.Y*x.Y + x.Z*x.Z
 }
 
 func (x Vector) Norm() float64 {
