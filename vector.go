@@ -23,6 +23,15 @@ func (x Vector) Sub(y Vector) Vector {
 		Z: x.Z - y.Z,
 	}
 }
+
+func (x Vector) ScalarMul(y float64) Vector {
+	return Vector{
+		X: x.X * y,
+		Y: x.Y * y,
+		Z: x.Z * y,
+	}
+}
+
 func (x Vector) SquaredNorm() float64 {
 	return x.X * x.Y * x.Z
 }
