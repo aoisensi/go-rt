@@ -43,3 +43,11 @@ func (x Vector) Norm() float64 {
 func (x Vector) Dot(y Vector) float64 {
 	return x.X*y.X + x.Y*y.Y + x.Z*y.Z
 }
+
+func (x Vector) Cross(y Vector) Vector {
+	return Vector{
+		X: x.Y*y.Z - x.Z*y.Y,
+		Y: x.Z*y.X - x.X*y.Z,
+		Z: x.X*y.Y - x.Y*y.X,
+	}
+}
