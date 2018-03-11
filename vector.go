@@ -51,3 +51,7 @@ func (x Vector) Cross(y Vector) Vector {
 		Z: x.X*y.Y - x.Y*y.X,
 	}
 }
+
+func (x Vector) Normalize() Vector {
+	return x.ScalarMul(1 / x.Norm())
+}
