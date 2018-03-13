@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 type Vector struct {
 	X float64
@@ -54,4 +57,8 @@ func (x Vector) Cross(y Vector) Vector {
 
 func (x Vector) Normalize() Vector {
 	return x.ScalarMul(1 / x.Norm())
+}
+
+func (x Vector) String() string {
+	return fmt.Sprintf("X:%04f,Y:%04f,Z:%04f", x.X, x.Y, x.Z)
 }
